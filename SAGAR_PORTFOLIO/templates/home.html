@@ -1,0 +1,49 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+            <a href="{{ url_for('home') }}" class="active">HOME</a>
+            <a href="{{ url_for('about') }}" class="active">ABOUT</a>
+            <a href="{{ url_for('projects') }}" class="active">PROJECTS</a>
+        </nav>
+        <a href="{{ url_for('contact') }}" class="contact-button"><i class="fas fa-envelope"></i> Contact Me</a>
+    </header>
+
+    <section class="hero">
+        <div class="intro">
+            <p>Hello,</p>
+            <h1>I'm <span>Sagar Kumar</span><br>Web Developer.</h1>
+            <p class="desc">
+                I'm a 3rd-year B.Tech student specializing in computer science with deep interest in web development.
+                I am passionate about technology and programming with a keen interest in web development and problem solving.
+            </p>
+
+            <!-- Social Media Links -->
+            <div class="socials">
+                <a href="https://www.instagram.com/mr.marvellous_45" class="circle-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sagar-kumar-khatai-88b98136b/" class="circle-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/sagar2006-arch" class="circle-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-pic">
+            <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile">
+        </div>
+    </section>
+</body>
+</html>
